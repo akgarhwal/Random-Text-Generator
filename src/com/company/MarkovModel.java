@@ -56,7 +56,7 @@ public class MarkovModel {
 
             if(model.containsKey(temp)){
                 Character nextLetter = model.get(temp).getNextLetter();
-                System.out.println("Temp : "+temp + " get next as "+nextLetter);
+                //System.out.println("Temp : "+temp + " get next as "+nextLetter);
                 temp = temp.substring(1,temp.length());
                 temp += nextLetter;
                 randomText += nextLetter;
@@ -69,7 +69,7 @@ public class MarkovModel {
                 temp = temp.substring(1,temp.length());
                 temp += nextLetter;
                 randomText += nextLetter;
-                System.out.println("Do not know what to do."+temp);
+                //System.out.println("Do not know what to do."+temp);
             }
 
         }
