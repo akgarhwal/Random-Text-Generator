@@ -1,20 +1,86 @@
-# Random-Text-Generator<br>
-<br>
-// A model of order 7 (Default is 1)<br>
-MarkovModel model = new MarkovModel(7);<br>
-// provide full path of input file for train your model<br>
-model.loadFile("/home/akgarhwal/IdeaProjects/Markov Model/src/com/company/input.txt");<br>
-<br>
-int LENGTH = 500;<br>
-String starterWord = "welcome";<br>
-String text = model.generateRandomText(starterWord,LENGTH);<br>
-<br>
-// now print text<br>
-System.out.print(text);<br>
+# Random Text Generator
+
+This project implements a Random Text Generator using an order-K Markov model in Java. It enables the generation of random text sequences based on the statistical properties of an input text, capturing the likelihood of character sequences to produce coherent output.
+
+## Features
+
+* **Order-K Markov Model**: Utilizes an order-K Markov model to analyze input text and generate random sequences that mimic the style and structure of the source.
+* **Customizable Order**: Allows users to specify the 'K' value, determining the length of the character sequences considered for predicting the next character.
+* **Flexible Input**: Supports training on any input text file provided by the user.
+* **Configurable Output**: Enables specification of the length and starting word for the generated text.
+
+## Getting Started
+
+### Prerequisites
+
+* Java Development Kit (JDK) installed on your system.
+
+### Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/akgarhwal/Random-Text-Generator.git
+   ```
 
 
-Example : <br>
-Input Text : <br>
+
+2. **Navigate to the Project Directory**:
+
+   ```bash
+   cd Random-Text-Generator
+   ```
+
+
+
+3. **Open the Project**:
+
+   Import the project into your preferred Java Integrated Development Environment (IDE).
+
+## Usage
+
+1. **Initialize the Markov Model**:
+
+   ```java
+   // Create a Markov model of order 7 (default is 1)
+   MarkovModel model = new MarkovModel(7);
+   ```
+
+
+
+2. **Train the Model with Input Text**:
+
+   ```java
+   // Provide the full path of the input file to train your model
+   model.loadFile("/path/to/your/input.txt");
+   ```
+
+
+
+3. **Generate Random Text**:
+
+   ```java
+   int length = 500; // Desired length of the generated text
+   String starterWord = "welcome"; // Starting word for text generation
+   String generatedText = model.generateRandomText(starterWord, length);
+   ```
+
+
+
+4. **Output the Generated Text**:
+
+   ```java
+   // Print the generated text
+   System.out.print(generatedText);
+   ```
+
+
+
+### Example
+
+**Input Text**:
+
+```
 Microsoft said Tuesday the company would comply with a preliminary ruling by Federal District Court Judge Ronald H. Whyte that Microsoft is no longer able to use the Java Compatibility Logo on its packaging and websites for Internet Explorer and Software Developers Kit for Java.
 "We remain confident that once all the facts are presented in the larger case, the court will find Microsoft to be in full compliance with its contract with Sun," stated Tom Burt, Associate General Counsel for Microsoft Corporation. "We are disappointed with this decision, but we will immediately comply with the Court's order."
 Microsoft has been in the forefront of helping developers use the Java programming language to write cutting-edge applications. The company has committed significant resources so that Java developers have the option of taking advantage of Windows features when writing software using the Java language. Providing the best tools and programming options will continue to be Microsoft's goal.
@@ -34,7 +100,25 @@ Before therefore replace some teachers instantly being invented, actually by Joh
 SUMMARY OF BUSH ARTICLE
 No argument with it? I'd be far out on a limb if I said that enhance our understand the people expect to have a clear how much about IBM in the functionality of today, but the article "As We May Think", which are available at the enterprise upon which you agree with Noam. Again, let me begins by noting them to help solve scientists in the amount of information, the number of problems.
 Still, Bush did hit the nail on the verge of breaking down. Why? First, he says, there are now found in T-shirts and sandals, drinking personal attention next.
-I'd like to say that you missed the connection be linked together in different world different than access it by typing in a short time with exponential colleges tonight.<br>
+I'd like to say that you missed the connection be linked together in different world different than access it by typing in a short time with exponential colleges tonight.
+```
 
-Output(500 Length) : <br>
+
+
+**Generated Output**:
+
+```
 Welcome to listen to our customers and provide them the topic that I get and put it on the lecture would comply with a preliminary ruling by Federal District Court Judge Ronald H. Whyte that thick envelope from Fred Hargadon. Right? The purpose is the prospect of having all knowledge online, and its implications. The company would be in this room and that no audio-visual aids would comply with a preliminary ruling by Federal District Court Judge Ronald H. Whyte that Microsoft to be Microsoft sai
+```
+
+
+
+*Note*: The generated text is a probabilistic outcome based on the input text's structure and may require multiple runs to achieve the desired coherence.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your enhancements.
+
+---
+
+For more information and to access the source code, visit the [GitHub Repository](https://github.com/akgarhwal/Random-Text-Generator).
